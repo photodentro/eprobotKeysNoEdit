@@ -23,9 +23,22 @@ SPDX-License-Identifier: CC-BY-SA-4.0
       Επιλογή δαπέδου:
       <select id ="sel" onchange="changeGrid();">
         <option value="empty">Κενό</option>
-        <option value="dice">Ζάρι</option>
         <option value="alpha">Αλφαβήτα</option>
+        <option value="dice">Ζάρι</option>
+        <option value="instr">Μουσικά όργανα</option>
+        <option value="toys">Παιχνίδια</option>
+        <option value="signs">Σήματα κυκλοφορίας</option>
+        <option value="shapes">Σχήματα</option>
         <option value="school">Σχολείο</option>
+        <option value="colors">Χρώματα</option>
+      </select>
+    </div>
+    <div id = "chars">
+      Επιλογή χαρακτήρα:
+      <select id ="selchar" onchange="changeChar();">
+        <option value="ladybug">Πασχαλίτσα</option>
+        <option value="car">Αυτοκίνητο</option>
+        <option value="student">Μαθητής</option>
       </select>
     </div>
   	<div id = "up">
@@ -169,7 +182,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
   </div>
     
   <div id="stage">
-      <img id="eprobot" src="./resource/eprobot.svg">
+      <img id="eprobot" src="./resource/ladybug.svg">
   </div>
 
   <div id="menubar">
