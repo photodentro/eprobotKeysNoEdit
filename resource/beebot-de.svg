@@ -13,9 +13,9 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="456.13242"
-   height="145.16273"
-   viewBox="0 0 456.13243 145.16274"
+   width="64mm"
+   height="47mm"
+   viewBox="0 0 241.88977 177.6378"
    xml:space="preserve"
    sodipodi:docname="beebot-de.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
@@ -80,189 +80,187 @@
    fit-margin-right="0"
    fit-margin-bottom="0"
    inkscape:zoom="0.531341"
-   inkscape:cx="121.06362"
-   inkscape:cy="254.50261"
+   inkscape:cx="-188.70867"
+   inkscape:cy="277.63497"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
-<rect
-   style="fill:#2792c1;fill-opacity:1;stroke:#57432f;stroke-width:0.90693045;stroke-opacity:1"
-   id="rect69"
-   width="455.22549"
-   height="134.60957"
-   x="0.45346522"
-   y="10.099697"
-   ry="19.346209" />
+
 <g
    id="g9"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g11"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g13"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g15"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g17"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g19"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g21"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g23"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g25"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g27"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g29"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g31"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g33"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g35"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
 <g
    id="g37"
-   transform="translate(31.108322,-31.108464)">
+   transform="translate(27.165997,-21.765763)">
 </g>
-<g
-   id="g1205"
-   transform="matrix(1.2326987,0,0,1.2289093,-74.168485,-16.157382)"><g
-     style="fill:#ffffff"
-     clip-path="url(#clipPath982)"
-     transform="rotate(45.009649,285.95595,268.03341)"
-     id="g939"><g
-       style="fill:#ffffff"
-       id="g881">
+<rect
+   style="fill:#2792c1;fill-opacity:1;stroke:#57432f;stroke-width:0.6589635;stroke-opacity:1"
+   id="rect69-1"
+   width="239.88441"
+   height="134.85754"
+   x="0.32948175"
+   y="13.677472"
+   ry="19.381847" /><g
+   id="g939"
+   transform="matrix(0.87150281,0.86911643,-0.87179639,0.86882375,148.84586,-162.82874)"
+   clip-path="url(#clipPath982)"
+   style="fill:#ffffff"><g
+     id="g881"
+     style="fill:#ffffff">
 	<g
-   style="fill:#ffffff"
-   id="_x33_58._Pause">
+   id="_x33_58._Pause"
+   style="fill:#ffffff">
 		<g
-   style="fill:#ffffff"
-   id="g878">
+   id="g878"
+   style="fill:#ffffff">
 			<path
-   style="fill:#ffffff"
-   inkscape:connector-curvature="0"
+   id="path876"
    d="m 125.632,109.931 c -8.666,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.035,15.701 15.701,15.701 8.666,0 15.701,-7.033 15.701,-15.701 v -62.793 c 0,-8.682 -7.035,-15.701 -15.701,-15.701 z M 293.002,78.529 C 249.646,3.434 153.618,-22.298 78.529,21.066 3.434,64.417 -22.298,160.44 21.066,235.532 c 43.35,75.095 139.375,100.83 214.465,57.47 75.096,-43.364 100.832,-139.384 57.471,-214.473 z M 219.834,265.8 C 159.767,300.492 82.94,279.906 48.258,219.827 13.568,159.76 34.161,82.933 94.23,48.259 154.301,13.569 231.124,34.153 265.808,94.23 300.493,154.305 279.906,231.115 219.834,265.8 Z M 188.432,109.931 c -8.664,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.037,15.709 15.701,15.709 8.668,0 15.701,-7.033 15.701,-15.709 v -62.793 c 0,-8.682 -7.033,-15.701 -15.701,-15.701 z"
-   id="path876" />
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
 		</g>
 	</g>
 </g><g
-       style="fill:#ffffff"
-       id="g883">
+     id="g883"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g885">
+     id="g885"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g887">
+     id="g887"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g889">
+     id="g889"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g891">
+     id="g891"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g893">
+     id="g893"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g895">
+     id="g895"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g897">
+     id="g897"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g899">
+     id="g899"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g901">
+     id="g901"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g903">
+     id="g903"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g905">
+     id="g905"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g907">
+     id="g907"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g909">
+     id="g909"
+     style="fill:#ffffff">
 </g><g
-       style="fill:#ffffff"
-       id="g911">
+     id="g911"
+     style="fill:#ffffff">
 </g></g><g
-     style="fill:#ffffff"
-     clip-path="url(#clipPath982-1)"
-     transform="rotate(-44.838777,90.274194,-34.51307)"
-     id="g939-7"><g
-       style="fill:#ffffff"
-       id="g881-9"><g
-         style="fill:#ffffff"
-         id="_x33_58._Pause-2"><g
-           style="fill:#ffffff"
-           id="g878-6"><path
-             style="fill:#ffffff"
-             inkscape:connector-curvature="0"
-             d="m 125.632,109.931 c -8.666,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.035,15.701 15.701,15.701 8.666,0 15.701,-7.033 15.701,-15.701 v -62.793 c 0,-8.682 -7.035,-15.701 -15.701,-15.701 z M 293.002,78.529 C 249.646,3.434 153.618,-22.298 78.529,21.066 3.434,64.417 -22.298,160.44 21.066,235.532 c 43.35,75.095 139.375,100.83 214.465,57.47 75.096,-43.364 100.832,-139.384 57.471,-214.473 z M 219.834,265.8 C 159.767,300.492 82.94,279.906 48.258,219.827 13.568,159.76 34.161,82.933 94.23,48.259 154.301,13.569 231.124,34.153 265.808,94.23 300.493,154.305 279.906,231.115 219.834,265.8 Z M 188.432,109.931 c -8.664,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.037,15.709 15.701,15.709 8.668,0 15.701,-7.033 15.701,-15.709 v -62.793 c 0,-8.682 -7.033,-15.701 -15.701,-15.701 z"
-             id="path876-0" /></g></g></g><g
-       style="fill:#ffffff"
-       id="g883-4" /><g
-       style="fill:#ffffff"
-       id="g885-1" /><g
-       style="fill:#ffffff"
-       id="g887-1" /><g
-       style="fill:#ffffff"
-       id="g889-5" /><g
-       style="fill:#ffffff"
-       id="g891-6" /><g
-       style="fill:#ffffff"
-       id="g893-5" /><g
-       style="fill:#ffffff"
-       id="g895-5" /><g
-       style="fill:#ffffff"
-       id="g897-4" /><g
-       style="fill:#ffffff"
-       id="g899-8" /><g
-       style="fill:#ffffff"
-       id="g901-1" /><g
-       style="fill:#ffffff"
-       id="g903-6" /><g
-       style="fill:#ffffff"
-       id="g905-7" /><g
-       style="fill:#ffffff"
-       id="g907-0" /><g
-       style="fill:#ffffff"
-       id="g909-4" /><g
-       style="fill:#ffffff"
-       id="g911-3" /></g></g></svg>
+   id="g939-7"
+   transform="matrix(0.87409887,-0.86652149,0.86919345,0.87141183,-125.73996,55.071513)"
+   clip-path="url(#clipPath982-1)"
+   style="fill:#ffffff"><g
+     id="g881-9"
+     style="fill:#ffffff"><g
+       id="_x33_58._Pause-2"
+       style="fill:#ffffff"><g
+         id="g878-6"
+         style="fill:#ffffff"><path
+           id="path876-0"
+           d="m 125.632,109.931 c -8.666,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.035,15.701 15.701,15.701 8.666,0 15.701,-7.033 15.701,-15.701 v -62.793 c 0,-8.682 -7.035,-15.701 -15.701,-15.701 z M 293.002,78.529 C 249.646,3.434 153.618,-22.298 78.529,21.066 3.434,64.417 -22.298,160.44 21.066,235.532 c 43.35,75.095 139.375,100.83 214.465,57.47 75.096,-43.364 100.832,-139.384 57.471,-214.473 z M 219.834,265.8 C 159.767,300.492 82.94,279.906 48.258,219.827 13.568,159.76 34.161,82.933 94.23,48.259 154.301,13.569 231.124,34.153 265.808,94.23 300.493,154.305 279.906,231.115 219.834,265.8 Z M 188.432,109.931 c -8.664,0 -15.701,7.027 -15.701,15.701 v 62.793 c 0,8.668 7.037,15.709 15.701,15.709 8.668,0 15.701,-7.033 15.701,-15.709 v -62.793 c 0,-8.682 -7.033,-15.701 -15.701,-15.701 z"
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff" /></g></g></g><g
+     id="g883-4"
+     style="fill:#ffffff" /><g
+     id="g885-1"
+     style="fill:#ffffff" /><g
+     id="g887-1"
+     style="fill:#ffffff" /><g
+     id="g889-5"
+     style="fill:#ffffff" /><g
+     id="g891-6"
+     style="fill:#ffffff" /><g
+     id="g893-5"
+     style="fill:#ffffff" /><g
+     id="g895-5"
+     style="fill:#ffffff" /><g
+     id="g897-4"
+     style="fill:#ffffff" /><g
+     id="g899-8"
+     style="fill:#ffffff" /><g
+     id="g901-1"
+     style="fill:#ffffff" /><g
+     id="g903-6"
+     style="fill:#ffffff" /><g
+     id="g905-7"
+     style="fill:#ffffff" /><g
+     id="g907-0"
+     style="fill:#ffffff" /><g
+     id="g909-4"
+     style="fill:#ffffff" /><g
+     id="g911-3"
+     style="fill:#ffffff" /></g></svg>

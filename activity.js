@@ -104,7 +104,7 @@ const LT = 3
 var act = {};
 var inter,inter1,inter2;
 
-const allCommands = 20;
+const allCommands = 30;
 function showCommand(cmdCode,cell){
   var idSuffix = ['fd','rt','bk','lt'];
   for (var i=0; i<4; i++){//for all cmdCodes
@@ -358,7 +358,7 @@ function moveLeft(){
 }
 
 function nextCommand(){
-  if (act.play){
+  if (act.play && !act.pause){
     setSquare();
     setOrientation();
     cmdCode = act.program[act.cmdExec];
@@ -435,6 +435,10 @@ function stop(){
   clearInterval(inter2);
 }
 
+function pause(){
+  act.pause=true;
+}
+
 function runFast(currentCommand){
   if (!act.play){
     act.position = [0,4];
@@ -502,17 +506,19 @@ function init(){
     //act.position = [0,4];
     //act.orientation = FD;
     //act.cmdExec = 0;
-    if (!act.play){
-    act.play = true;
-    setTimeout(nextCommand,100);
+    if (!act.play || (act.play && act.pause)){
+      act.play = true;
+      act.pause = false;
+      setTimeout(nextCommand,100);
     }
   });
   
   ge('cdelete').addEventListener('click',restart);
 
-  ge('cstop').addEventListener('click',function(){
-      stop();
-  });
+  ge('cstop').addEventListener('click',stop);
+
+  ge('cpause').addEventListener('click',pause);
+
   for (let i=0; i<allCommands; i++){
     ge('cell'+i.toString()).onclick = function(){runFast(i)};
   }
