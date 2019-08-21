@@ -49,6 +49,24 @@ function ge(id) {
   return document.getElementById(id);
 }
 
+function marginsToCanvas(marginTop,marginLeft){
+  //margins are in ems
+  point = {};
+  marginTop = parseInt(marginTop);
+  marginLeft = parseInt(marginLeft);
+  point.y = marginTop/6*30 + 15;
+  point.x = marginLeft/6*43 + 22.5;//must be the scaling
+  return(point);
+}
+
+function positionToCanvas(position){
+  point = {};
+  point.y = position[1]*30 + 15;
+  point.x = position[0]*43 + 22.5;
+  return(point);
+}
+
+
 function onResize(event) {
   var w = window.innerWidth;
   var h = window.innerHeight;
@@ -103,8 +121,8 @@ const BK = 2
 const LT = 3
 var act = {};
 var inter,inter1,inter2;
-
 const allCommands = 30;
+
 function showCommand(cmdCode,cell){
   var idSuffix = ['fd','rt','bk','lt'];
   for (var i=0; i<4; i++){//for all cmdCodes
@@ -249,11 +267,15 @@ function animationSi(startPos,endPos,hor){
     when hor = true marginLeft
     when hor = false marginTop
   */
+  c = ge('mycanvas');
+  ctx = c.getContext('2d');
+  ctx.setLineDash([]);
 
   var diff = (endPos - startPos)/10;
   let i=0; 
   inter = setInterval(function(){
     if (act.play){
+      startpoint = marginsToCanvas(ge('eprobot').style.marginTop,ge('eprobot').style.marginLeft);
       if (Math.abs((startPos + i*diff - endPos)) < 0.01){
         if (hor){
           ge('eprobot').style.marginLeft = sformat("{}em",endPos);
@@ -276,6 +298,13 @@ function animationSi(startPos,endPos,hor){
         }
         i++;
     }
+    endpoint = marginsToCanvas(ge('eprobot').style.marginTop,ge('eprobot').style.marginLeft);
+    console.log(startpoint.x,startpoint.y,endpoint.x,endpoint.y);
+    ctx.beginPath();
+    ctx.moveTo(startpoint.x,startpoint.y);
+    ctx.lineTo(endpoint.x,endpoint.y);
+    ctx.stroke();
+    ctx.closePath();
   }
 },100);
 }
@@ -419,6 +448,9 @@ function restart(){
     setSquare();
     deleteProgram();
     highlightCommand(-1);//-1 means none
+    c = ge('mycanvas');
+    ctx = c.getContext('2d');
+    ctx.clearRect(0,0,c.width,c.height);
 }
 
 function stop(){
@@ -433,6 +465,9 @@ function stop(){
   clearInterval(inter);
   clearInterval(inter1);
   clearInterval(inter2);
+  c = ge('mycanvas');
+  ctx = c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
 }
 
 function pause(){
@@ -443,7 +478,14 @@ function runFast(currentCommand){
   if (!act.play){
     act.position = [0,4];
     act.orientation = FD;
+    c = ge('mycanvas');
+    ctx = c.getContext('2d');
+    ctx.clearRect(0,0,c.width,c.height);
+    ctx.setLineDash([]);
+    ctx.beginPath();
     for (i=0; i<=currentCommand; i++){
+      startpoint = positionToCanvas(act.position);
+      ctx.moveTo(startpoint.x,startpoint.y);
       switch (act.program[i]){
         case FD:
           switch (act.orientation){
@@ -468,8 +510,13 @@ function runFast(currentCommand){
           act.orientation = (act.orientation + 3) % 4;
         break;
       }
+      endpoint = positionToCanvas(act.position);
+      ctx.lineTo(endpoint.x,endpoint.y);
     }
-      setSquare();
+    ctx.stroke();
+    ctx.closePath();
+
+    setSquare();
     setOrientation();
     act.cmdExec = i;
     highlightCommand(i-1);
@@ -568,3 +615,38 @@ function changeChar(){
 }
 
 
+
+
+
+/*
+    var c = document.getElementById("mycanvas");
+    var ctx = c.getContext("2d");
+    var gWidth = 42.3;//must be the scaling
+    var gHeight = 30;
+    ctx.lineWidth = 0.2;
+    ctx.setLineDash([3]);
+    ctx.beginPath();
+    ctx.strokeRect(squareX,squareY,gWidth,gHeight);
+    ctx.lineWidth = 3;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    if (squareCode & 1) {
+        ctx.moveTo(squareX,squareY+gHeight);
+        ctx.lineTo(squareX+gWidth,squareY+gHeight);
+    }
+    if (squareCode & 2) {
+        ctx.moveTo(squareX,squareY);
+        ctx.lineTo(squareX,squareY+gHeight);
+    }
+    if (squareCode & 4) {
+        ctx.moveTo(squareX,squareY);
+        ctx.lineTo(squareX+gWidth,squareY);
+    }
+    if (squareCode & 8) {
+        ctx.moveTo(squareX+gWidth,squareY);
+        ctx.lineTo(squareX+gWidth,squareY+gHeight);
+    }
+    ctx.stroke();
+    ctx.closePath();
+}
+*/

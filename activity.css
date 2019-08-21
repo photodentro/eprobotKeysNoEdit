@@ -194,7 +194,7 @@ body {
 .cell img{
   margin-left: -0.1em;
   height: 100%;
-  max-width:70%;
+  max-width:80%;
   vertical-align: middle;
   filter: hue-rotate(210deg) brightness(140%);
 }
@@ -206,6 +206,7 @@ body {
   transform: scale1.1);
 }
 #stage{
+  position:absolute;
   background-image:url('./resource/grid.svg');
   background-size: cover;
   display:inline-block;
@@ -213,6 +214,16 @@ body {
   margin-right:0.5em;
   height: 30.1em;
   width:43em;
+}
+#mycanvas{
+  border: 2px solid red	;
+  position:absolute;
+  display:inline-block;
+  margin-bottom: 1.5em;
+  margin-right:0.5em;
+  height: 30.1em;
+  width:43em;
+  z-index: 100;
 }
 #grid{
 	width:100%;
@@ -224,6 +235,7 @@ body {
 	height:6em;
 	margin-left:0em;
 	margin-top:0em;
+	z-index: 200;
 }
 
 
@@ -299,5 +311,6 @@ body {
   -webkit-filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
   filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
   font-size: 2em;
+  z-index: 300;
 }
 
