@@ -307,7 +307,7 @@ body {
   height: 100%;
   top: 0;  /* IE and old webview ignore "fixed" for flex childs */
   left: 0;
-  z-index:1000;
+  z-index:999;
 }
 
 #help .dialog {
