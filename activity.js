@@ -460,7 +460,7 @@ function restart(){
     setSquare();
     deleteProgram();
     highlightCommand(-1);//-1 means none
-    clearTrace()
+    clearTrace();
 }
 
 function stop(){
@@ -565,7 +565,11 @@ function init(){
     }
   });
   
-  ge('cdelete').addEventListener('click',restart);
+  ge('cdelete').addEventListener('click',function(){
+    var wasPencil = act.pencil;
+    restart();
+    act.pencil = wasPencil;
+  });
 
   ge('cstop').addEventListener('click',stop);
 
