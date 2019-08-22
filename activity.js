@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2019 Dimitris Nikolos <dnikolos@gmail.com>.
+Copyright (C) 2019 Dimitris Nikolos <dnikolos@gmail`.`com>.
 SPDX-License-Identifier: CC-BY-SA-4.0*/
 
 function onError(message, source, lineno, colno, error) {
@@ -55,14 +55,14 @@ function marginsToCanvas(marginTop,marginLeft){
   marginTop = parseInt(marginTop);
   marginLeft = parseInt(marginLeft);
   point.y = marginTop/6*30 + 15;
-  point.x = marginLeft/6*43 + 22.5;//must be the scaling
+  point.x = marginLeft/6*43 + 21.5;//must be the scaling
   return(point);
 }
 
 function positionToCanvas(position){
   point = {};
   point.y = position[1]*30 + 15;
-  point.x = position[0]*43 + 22.5;
+  point.x = position[0]*43 + 21.5;
   return(point);
 }
 
@@ -260,6 +260,26 @@ function animationNo(curPos,dir,hor){
 
 }
 
+function clearTrace(){
+  c = ge('mycanvas');
+  ctx = c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
+}
+
+function trace(startpoint,endpoint){
+
+  if (act.pencil){
+    c = ge('mycanvas');
+    ctx = c.getContext('2d');
+    ctx.setLineDash([]);
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.strokeRect(startpoint.x,startpoint.y,endpoint.x-startpoint.x,endpoint.y-startpoint.y);
+    ctx.stroke();
+    ctx.closePath();
+}
+}
+
 function animationSi(startPos,endPos,hor){
   /*animation with set interval 
     startpos is in ems
@@ -267,10 +287,6 @@ function animationSi(startPos,endPos,hor){
     when hor = true marginLeft
     when hor = false marginTop
   */
-  c = ge('mycanvas');
-  ctx = c.getContext('2d');
-  ctx.setLineDash([]);
-
   var diff = (endPos - startPos)/10;
   let i=0; 
   inter = setInterval(function(){
@@ -299,12 +315,7 @@ function animationSi(startPos,endPos,hor){
         i++;
     }
     endpoint = marginsToCanvas(ge('eprobot').style.marginTop,ge('eprobot').style.marginLeft);
-    console.log(startpoint.x,startpoint.y,endpoint.x,endpoint.y);
-    ctx.beginPath();
-    ctx.moveTo(startpoint.x,startpoint.y);
-    ctx.lineTo(endpoint.x,endpoint.y);
-    ctx.stroke();
-    ctx.closePath();
+    trace(startpoint,endpoint);
   }
 },100);
 }
@@ -388,6 +399,9 @@ function moveLeft(){
 
 function nextCommand(){
   if (act.play && !act.pause){
+    if (act.cmdExec == 0){
+      clearTrace();
+    }
     setSquare();
     setOrientation();
     cmdCode = act.program[act.cmdExec];
@@ -397,9 +411,6 @@ function nextCommand(){
     else{
       highlightCommand(-1);
       act.play = false;
-      act.cmdExec = 0;
-      act.position = [0,4];
-      act.orientation = FD;
     }
     switch (cmdCode){
       case FD:
@@ -443,14 +454,13 @@ function restart(){
       cmdExec: 0,
       play: false,//play means that the program is executed but may be it is paused
       pause: false,
+      trace: false,
     }
     setOrientation();
     setSquare();
     deleteProgram();
     highlightCommand(-1);//-1 means none
-    c = ge('mycanvas');
-    ctx = c.getContext('2d');
-    ctx.clearRect(0,0,c.width,c.height);
+    clearTrace()
 }
 
 function stop(){
@@ -465,9 +475,7 @@ function stop(){
   clearInterval(inter);
   clearInterval(inter1);
   clearInterval(inter2);
-  c = ge('mycanvas');
-  ctx = c.getContext('2d');
-  ctx.clearRect(0,0,c.width,c.height);
+  clearTrace();
 }
 
 function pause(){
@@ -475,17 +483,11 @@ function pause(){
 }
 
 function runFast(currentCommand){
-  if (!act.play){
     act.position = [0,4];
     act.orientation = FD;
-    c = ge('mycanvas');
-    ctx = c.getContext('2d');
-    ctx.clearRect(0,0,c.width,c.height);
-    ctx.setLineDash([]);
-    ctx.beginPath();
+    clearTrace();
     for (i=0; i<=currentCommand; i++){
       startpoint = positionToCanvas(act.position);
-      ctx.moveTo(startpoint.x,startpoint.y);
       switch (act.program[i]){
         case FD:
           switch (act.orientation){
@@ -511,16 +513,12 @@ function runFast(currentCommand){
         break;
       }
       endpoint = positionToCanvas(act.position);
-      ctx.lineTo(endpoint.x,endpoint.y);
+      trace(startpoint,endpoint);
     }
-    ctx.stroke();
-    ctx.closePath();
-
     setSquare();
     setOrientation();
     act.cmdExec = i;
     highlightCommand(i-1);
-  }
 }
 
 
@@ -554,6 +552,13 @@ function init(){
     //act.orientation = FD;
     //act.cmdExec = 0;
     if (!act.play || (act.play && act.pause)){
+      if (act.cmdExec == act.program.length){
+        act.cmdExec = 0;
+        act.position = [0,4];
+        act.orientation = FD;
+        setSquare();
+        setOrientation();
+      }
       act.play = true;
       act.pause = false;
       setTimeout(nextCommand,100);
@@ -567,8 +572,29 @@ function init(){
   ge('cpause').addEventListener('click',pause);
 
   for (let i=0; i<allCommands; i++){
-    ge('cell'+i.toString()).onclick = function(){runFast(i)};
+    ge('cell'+i.toString()).onclick = function(){
+      if (!act.play || (act.play && act.pause)){
+        runFast(i);
+      }
+    };
   }
+
+  ge('cpencil').addEventListener('click',function(){
+      if (!act.play || (act.play && act.pause)){
+        clearTrace();
+        act.pencil = !act.pencil;
+        if (act.pencil){
+          ge('cpencil').src = "resource/pencil-on.svg";
+          runFast(act.cmdExec-1);
+          if (act.cmdExec == act.program.length){
+            highlightCommand(-1);
+          }
+        }
+        else{
+          ge('cpencil').src = "resource/pencil-off.svg";
+        }
+      }
+    });
 }
 
 window.onerror = onError;
@@ -576,7 +602,7 @@ window.onload = init;
 // Call onResize even before the images are loaded
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', onResize);
-} else {  // DOMContentLoaded` already fired
+} else {  // DOMContentLoaded already fired
   onResize();
 }
 
@@ -590,6 +616,7 @@ function changeGrid(){
                "toys"  :"resource/toys.svg",
                "signs" :"resource/signs.svg",
                "shapes":"resource/shapes.svg",
+               "frouta":"resource/frouta.svg",
                "colors":"resource/colors.svg",
 }
   var s = ge('sel');

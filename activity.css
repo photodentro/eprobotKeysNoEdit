@@ -159,6 +159,13 @@ body {
   margin-top:1em;
   cursor:pointer;  
 }
+
+#cpencil{
+  width:40%;
+  margin-top:1em;
+  cursor:pointer;  
+}
+
 #program{
   background-color:#00000077;
   display:inline-block;
@@ -203,7 +210,7 @@ body {
   filter: brightness(180%);
   border: 2px solid yellow;
   
-  transform: scale1.1);
+  transform: scale(1.1);
 }
 #stage{
   position:absolute;
@@ -216,7 +223,6 @@ body {
   width:43em;
 }
 #mycanvas{
-  border: 2px solid red	;
   position:absolute;
   display:inline-block;
   margin-bottom: 1.5em;
