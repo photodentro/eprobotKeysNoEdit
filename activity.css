@@ -183,9 +183,11 @@ body {
   display:inline-block;
   height: 24em;
   width: 100%;
-  cursor:pointer;  
 }
 
+.progButtons{
+	cursor:pointer;
+}
 .cell{
   display: inline-block;
   margin-left:0.05em;
@@ -237,6 +239,7 @@ body {
   text-align:left;
 }
 #eprobot{
+	position:absolute;
 	width:6em;
 	height:6em;
 	margin-left:0em;
@@ -304,9 +307,11 @@ body {
   height: 100%;
   top: 0;  /* IE and old webview ignore "fixed" for flex childs */
   left: 0;
+  z-index:1000;
 }
 
 #help .dialog {
+  position: absolute;
   text-align: center;
   width: 19em;
   background-color: rgb(255,255,255);
@@ -317,6 +322,6 @@ body {
   -webkit-filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
   filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
   font-size: 2em;
-  z-index: 300;
+  z-index: 1000;
 }
 

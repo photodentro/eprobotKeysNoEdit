@@ -411,6 +411,10 @@ function nextCommand(){
     else{
       highlightCommand(-1);
       act.play = false;
+      //when the program ends
+      //the character remains in the last
+      //position and is out of place
+      act.outofplace = true;
     }
     switch (cmdCode){
       case FD:
@@ -455,6 +459,7 @@ function restart(){
       play: false,//play means that the program is executed but may be it is paused
       pause: false,
       trace: false,
+      outofplace : false,
     }
     setOrientation();
     setSquare();
@@ -552,7 +557,8 @@ function init(){
     //act.orientation = FD;
     //act.cmdExec = 0;
     if (!act.play || (act.play && act.pause)){
-      if (act.cmdExec == act.program.length){
+      if (act.outofplace){
+        act.outofplace = false;
         act.cmdExec = 0;
         act.position = [0,4];
         act.orientation = FD;
@@ -578,7 +584,14 @@ function init(){
   for (let i=0; i<allCommands; i++){
     ge('cell'+i.toString()).onclick = function(){
       if (!act.play || (act.play && act.pause)){
-        runFast(i);
+        if (i == act.program.length-1){
+          //when the user selects the last command
+          //selection and position are in harmony
+          act.outofplace = false;
+        }
+        if (i<act.program.length){
+          runFast(i);
+        }
       }
     };
   }
@@ -592,6 +605,7 @@ function init(){
           runFast(act.cmdExec-1);
           if (act.cmdExec == act.program.length){
             highlightCommand(-1);
+            act.outofplace = true;
           }
         }
         else{
