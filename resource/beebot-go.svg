@@ -13,9 +13,9 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="64"
-   height="47"
-   viewBox="0 0 64.000005 47.000003"
+   width="239.88441"
+   height="134.85754"
+   viewBox="0 0 239.88443 134.85755"
    xml:space="preserve"
    sodipodi:docname="beebot-go.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
@@ -63,84 +63,84 @@
    fit-margin-right="0"
    fit-margin-bottom="0"
    inkscape:zoom="0.75142965"
-   inkscape:cx="39.227756"
-   inkscape:cy="14.004589"
+   inkscape:cx="119.94222"
+   inkscape:cy="282.79046"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
+
+<g
+   id="g9"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g11"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g13"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g15"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g17"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g19"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g21"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g23"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g25"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g27"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g29"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g31"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g33"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g35"
+   transform="translate(326.95794,-113.17096)">
+</g>
+<g
+   id="g37"
+   transform="translate(326.95794,-113.17096)">
+</g>
 <rect
-   style="fill:#2792c1;fill-opacity:1;stroke:#57432f;stroke-width:0.17442767;stroke-opacity:1"
+   style="fill:#2792c1;fill-opacity:1;stroke:#57432f;stroke-width:0.6511842;stroke-opacity:1"
    id="rect69"
-   width="63.11063"
-   height="35.915581"
-   x="0.086673006"
-   y="7.0191808"
-   ry="5.1618195" /><path
+   width="238.94971"
+   height="132.20743"
+   x="0.93469238"
+   y="1.7111969"
+   ry="19.000967" /><path
    inkscape:connector-curvature="0"
    id="path2"
    d="m 356.88023,50.583271 c -43.356,-75.095 -139.384,-100.826 -214.473,-57.4620001 C 67.312236,36.471271 41.580236,132.49527 84.944236,207.58727 c 43.349994,75.095 139.374994,100.83 214.464994,57.47 75.096,-43.365 100.84,-139.384 57.471,-214.473999 z m -73.168,187.270999 c -60.067,34.692 -136.894,14.106 -171.57599,-45.973 -34.690004,-60.067 -14.097004,-136.892997 45.97199,-171.567999 60.071,-34.69 136.894,-14.1060001 171.578,45.971002 34.685,60.075997 14.098,136.885997 -45.974,171.569997 z m -6.279,-115.149 -82.214,-47.948997 c -7.492,-4.374 -13.535,-0.877 -13.493,7.789005 l 0.421,95.173992 c 0.038,8.664 6.155,12.191 13.669,7.851 l 81.585,-47.103 c 7.506,-4.332 7.522,-11.388 0.032,-15.762 z"
    clip-path="url(#clipPath54)"
-   transform="matrix(0.23277148,0,0,0.23563345,-19.731385,-5.7048051)"
-   style="fill:#ffffff;fill-opacity:1" />
-<g
-   id="g9"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g11"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g13"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g15"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g17"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g19"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g21"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g23"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g25"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g27"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g29"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g31"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g33"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g35"
-   transform="translate(29.98904,-149.60432)">
-</g>
-<g
-   id="g37"
-   transform="translate(29.98904,-149.60432)">
-</g>
-</svg>
+   transform="matrix(0.88132025,0,0,0.86738087,-72.100498,-45.126559)"
+   style="fill:#ffffff;fill-opacity:1" /></svg>

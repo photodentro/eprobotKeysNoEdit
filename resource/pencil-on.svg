@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="63.643768mm"
-   height="46.805065mm"
-   viewBox="0 0 63.643768 46.805065"
+   width="63.469418mm"
+   height="35.681057mm"
+   viewBox="0 0 63.469417 35.681057"
    version="1.1"
    id="svg978"
    sodipodi:docname="pencil-on.svg"
@@ -59,8 +59,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="-184.50212"
-     inkscape:cy="-2.4740387"
+     inkscape:cx="-240.49165"
+     inkscape:cy="-20.926554"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -81,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -89,7 +89,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-4.46383,-124.86407)">
+     transform="translate(-4.5510054,-131.10585)">
     <rect
        style="fill:#27923b;fill-opacity:1;stroke:#57432f;stroke-width:0.17486264;stroke-opacity:1"
        id="rect69-1"
