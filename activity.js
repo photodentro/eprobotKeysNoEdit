@@ -668,8 +668,8 @@ function init(maze,levels){
   }
 
   restart();
-  newMaze(0);
   if (maze){
+    newMaze(0);
     ge('maze0').addEventListener('click',function(){newMaze(0);});
     ge('maze1').addEventListener('click',function(){newMaze(1);});
     ge('maze2').addEventListener('click',function(){newMaze(2);});
